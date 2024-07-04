@@ -1,4 +1,5 @@
 const fs = require('fs');
+const os = require('os');
 
 // Sync
 // fs.writeFileSync("./test.txt","Hey there");
@@ -21,3 +22,5 @@ fs.appendFileSync("./test.txt",new Date().getDate().toLocaleString());
 // fs.unlinkSync("./copy.txt");
 console.log(fs.statSync("./test.txt"));
 fs.mkdirSync("my-docs/a/b",{recursive: true});
+
+console.log(os.cpus().length);
